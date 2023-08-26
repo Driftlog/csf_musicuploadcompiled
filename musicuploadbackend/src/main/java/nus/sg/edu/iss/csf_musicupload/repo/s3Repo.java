@@ -38,6 +38,7 @@ public class s3Repo {
              metaData);
              putReq = putReq.withCannedAcl(CannedAccessControlList.PublicRead);
              try {
+               //put req here fails
                  s3.putObject(putReq);
                 System.out.println("Upload successful");
              } catch(Exception ex)  {
