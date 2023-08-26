@@ -1,0 +1,12 @@
+  <h1> Upload Your Music Files Here!</h1>
+
+  <input type="file" placeholder="Upload your files here" multiple #files (change)="listFiles($event)">
+  <br>
+  <button (click)="uploadMusic()" [disabled]="!fileList" > Submit files </button>
+
+  <h2> List of Files </h2>
+  <span *ngIf="fileList">
+    <div *ngFor="let item of fileList"> {{item}} </div>
+  </span>
+
+
